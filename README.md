@@ -1,8 +1,5 @@
-# Welcome to your Lovable project
+# Welcome to Shanvilla project
 
-## Project info
-
-**URL**: https://lovable.dev/projects/ae9bf393-87ce-4d06-bc59-614fd0ee7dad
 
 ## How can I edit this code?
 
@@ -10,9 +7,6 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ae9bf393-87ce-4d06-bc59-614fd0ee7dad) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
