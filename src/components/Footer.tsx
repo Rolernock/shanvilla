@@ -1,6 +1,7 @@
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4 lg:px-8">
@@ -57,7 +58,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/60 text-sm">
-              © 2024 Shanvilla Hotel. All rights reserved.
+              © {currentYear} Shanvilla Hotel. All rights reserved.
             </p>
             <div className="flex items-center gap-4 text-sm text-background/60">
               <span>Call for reservations: 0111427894</span>
