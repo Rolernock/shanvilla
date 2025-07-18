@@ -46,7 +46,12 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className='flex flex-col sm:flex-row gap-4 mb-8'>
-            <Button variant='elegant' size='lg' className='text-lg'>
+            <Button
+              variant='elegant'
+              onClick={() => window.open('tel:0111427894', '_self')}
+              size='lg'
+              className='text-lg'
+            >
               <Phone className='w-5 h-5' />
               Call 0111427894
             </Button>
