@@ -91,7 +91,7 @@ const GallerySection = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Enjoy fine dining in our elegant restaurant with modern ambiance and exceptional service.
                 </p>
-                <Button variant="elegant" size="sm">
+                <Button variant="elegant" size="sm" onClick={() => window.open('tel:0111427894', '_self')}>
                   <Phone className="w-4 h-4" />
                   Reserve Table
                 </Button>
@@ -116,7 +116,7 @@ const GallerySection = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Relax under the stars in our beautiful outdoor terrace with ambient lighting and comfortable seating.
                 </p>
-                <Button variant="elegant" size="sm">
+                <Button variant="elegant" size="sm" onClick={() => window.open('tel:0111427894', '_self')}>
                   <Phone className="w-4 h-4" />
                   Book Experience
                 </Button>
