@@ -69,10 +69,12 @@ const RoomsSection = () => {
 
                 {/* CTA */}
                 <div className='flex flex-col sm:flex-row gap-4'>
-                  <Button variant='hero' size='lg' className='flex-1'>
-                    Book Now
-                  </Button>
-                  <Button variant='elegant' size='lg' className='flex-1'>
+                  <Button
+                    variant='elegant'
+                    onClick={() => window.open('tel:0111427894', '_self')}
+                    size='lg'
+                    className='w-full sm:flex-1 min-w-[140px]'
+                  >
                     <Phone className='w-5 h-5' />
                     Call for Rates
                   </Button>
