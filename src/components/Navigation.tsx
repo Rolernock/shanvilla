@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Phone, Menu, X } from 'lucide-react'
+import Logo from '/images/logo.webp'
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,6 +20,16 @@ const Navigation = () => {
         <div className='flex items-center justify-between h-16'>
           {/* Logo */}
           <div className='flex items-center'>
+            {/* <button
+              onClick={() => scrollToSection('home')}
+              className='flex items-center hover:opacity-80 transition-opacity duration-200'
+            >
+              <img
+                src={Logo}
+                alt='Shanvilla Resort Logo'
+                className='h-10 w-auto'
+              />
+            </button> */}
             <h1 className='text-2xl font-bold text-primary'>
               Shanvilla Resort
             </h1>
