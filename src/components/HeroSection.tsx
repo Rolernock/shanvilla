@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Phone, MapPin, Wifi, Clock, UtensilsCrossed } from 'lucide-react'
-import heroImage from '/lovable-uploads/2f66f05b-bf62-45fa-8c6d-aaade18b18a2.png'
+import heroImage from '/images/bg.webp'
 
 const HeroSection = () => {
   return (
@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className='max-w-2xl animate-fade-in'>
           <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
             Welcome to
-            <span className='block text-primary-glow'>Shanvilla Hotel</span>
+            <span className='block text-primary-glow'>Shanvilla Resort</span>
           </h1>
 
           <p className='text-xl md:text-2xl text-white/90 mb-8 leading-relaxed'>
