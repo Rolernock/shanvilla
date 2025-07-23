@@ -1,11 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Bed, Wifi, UtensilsCrossed, Bath, Car, Phone } from 'lucide-react'
-import modernRoom from '/lovable-uploads/1.jpg'
+import modernRoom from '/images/vip.webp'
+import bathroom from '/images/bathroom.webp'
 
 const roomFeatures = [
   { icon: Bed, label: 'King Size Bed' },
-  { icon: Bath, label: 'Private Bathroom' },
+  { icon: Bath, label: 'Luxury Bathroom' },
   { icon: Wifi, label: 'Free WiFi' },
   { icon: UtensilsCrossed, label: 'Room Service' },
   { icon: Car, label: 'Parking' }
@@ -18,11 +19,12 @@ const RoomsSection = () => {
         {/* Header */}
         <div className='text-center mb-16 animate-fade-in'>
           <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
-            Modern Comfort Rooms
+            Luxury Accommodations
           </h2>
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
-            Our thoughtfully designed rooms blend contemporary style with
-            comfort, ensuring every guest enjoys a peaceful and luxurious stay.
+            Experience unparalleled comfort in our meticulously designed rooms,
+            featuring premium amenities and elegant finishes for a memorable
+            stay.
           </p>
         </div>
 
@@ -30,27 +32,46 @@ const RoomsSection = () => {
         <div className='max-w-6xl mx-auto'>
           <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
             <div className='grid lg:grid-cols-2 gap-0'>
-              {/* Image */}
-              <div className='relative overflow-hidden'>
-                <img
-                  src={modernRoom}
-                  alt='Shanvilla Hotel bar area with wooden design and modern stools'
-                  className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
+              {/* Image Gallery */}
+              <div className='relative'>
+                <div className='h-[400px] overflow-hidden'>
+                  <img
+                    src={modernRoom}
+                    alt='Modern luxury room at Shanvilla Resort'
+                    className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
+                  />
+                </div>
+                <div className='grid grid-cols-2 gap-0 h-[200px]'>
+                  <div className='relative overflow-hidden'>
+                    <img
+                      src={bathroom}
+                      alt='Luxury bathroom with modern fixtures'
+                      className='w-full h-full object-cover hover:scale-110 transition-transform duration-500'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/10 to-transparent'></div>
+                  </div>
+                  <div className='bg-foreground/5 flex items-center justify-center'>
+                    <div className='text-center p-4'>
+                      <Bath className='w-10 h-10 mx-auto text-primary mb-2' />
+                      <h4 className='font-semibold'>Spa-like Bathrooms</h4>
+                      <p className='text-sm text-muted-foreground'>
+                        Premium fixtures & amenities
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Content */}
               <CardContent className='p-8 lg:p-12 flex flex-col justify-center'>
                 <h3 className='text-3xl font-bold text-foreground mb-6'>
-                  Deluxe Modern Room
+                  Executive Suite
                 </h3>
 
                 <p className='text-lg text-muted-foreground mb-8 leading-relaxed'>
-                  Experience the perfect blend of style and comfort in our
-                  modern rooms. Each space is meticulously designed with
-                  contemporary furnishings, premium amenities, and thoughtful
-                  touches that make your stay memorable.
+                  Our signature rooms blend contemporary elegance with
+                  exceptional comfort. Featuring a king-size bed, spacious work
+                  area, and luxury bathroom with premium toiletries.
                 </p>
 
                 {/* Features Grid */}
@@ -70,6 +91,17 @@ const RoomsSection = () => {
                 {/* CTA */}
                 <div className='flex flex-col sm:flex-row gap-4'>
                   <Button
+                    variant='hero'
+                    size='lg'
+                    className='w-full sm:flex-1 min-w-[140px]'
+                    onClick={() =>
+                      (window.location.href =
+                        'mailto:reception@shanvillaresortkenya.co.ke?subject=Room Booking Inquiry')
+                    }
+                  >
+                    Book Now
+                  </Button>
+                  <Button
                     variant='elegant'
                     onClick={() => window.open('tel:0111427894', '_self')}
                     size='lg'
@@ -82,34 +114,6 @@ const RoomsSection = () => {
               </CardContent>
             </div>
           </Card>
-        </div>
-
-        {/* Additional Benefits */}
-        <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
-          <div className='text-center p-6 bg-card/50 rounded-xl border border-border/30'>
-            <h4 className='text-xl font-semibold text-foreground mb-3'>
-              Free Room Service
-            </h4>
-            <p className='text-muted-foreground'>
-              Enjoy complimentary 24/7 room service for all our guests
-            </p>
-          </div>
-          <div className='text-center p-6 bg-card/50 rounded-xl border border-border/30'>
-            <h4 className='text-xl font-semibold text-foreground mb-3'>
-              Late Checkout
-            </h4>
-            <p className='text-muted-foreground'>
-              Flexible checkout times to suit your travel schedule
-            </p>
-          </div>
-          <div className='text-center p-6 bg-card/50 rounded-xl border border-border/30'>
-            <h4 className='text-xl font-semibold text-foreground mb-3'>
-              High-Speed WiFi
-            </h4>
-            <p className='text-muted-foreground'>
-              Free fast internet connectivity throughout the property
-            </p>
-          </div>
         </div>
       </div>
     </section>
