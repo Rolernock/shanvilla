@@ -5,6 +5,11 @@ import Dining from '/images/11.webp'
 import outDoor from '/images/10.webp'
 import TeamPhoto from '/images/teamPhoto.webp'
 import DJNight from '/images/dj.webp'
+import Sunset from '/images/1ct.webp'
+import Ginita from '/images/2ct.webp'
+import EggTizing from '/images/3ct.webp'
+import Spring from '/images/4ct.webp'
+import Food from '/images/fd.webp'
 
 const galleryImages = [
   {
@@ -95,13 +100,17 @@ const GallerySection = () => {
         {/* DJ night */}
         <div className='mb-16 mt-12'>
           <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
-            <div className='grid md:grid-cols-2 gap-0'>
-              <div className='relative overflow-hidden h-64 md:h-auto'>
-                <img
-                  src={DJNight}
-                  alt='Weekend DJ entertainment at Shanvilla Hotel'
-                  className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
-                />
+            <div className='flex flex-col md:flex-row'>
+              <div className='relative w-full md:w-1/2 flex justify-center bg-gray-100 dark:bg-gray-800'>
+                <div className='w-full max-w-lg'>
+                  {' '}
+                  {/* Constrains maximum width */}
+                  <img
+                    src={DJNight}
+                    alt='Weekend DJ entertainment at Shanvilla Hotel'
+                    className='w-full h-auto max-h-[400px] object-contain md:object-cover'
+                  />
+                </div>
                 <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
               </div>
               <CardContent className='p-6 md:p-8 flex flex-col justify-center'>
@@ -146,6 +155,165 @@ const GallerySection = () => {
               </CardContent>
             </div>
           </Card>
+        </div>
+        {/* Food Section */}
+        {/* Choma Platter Promo Section */}
+        <div className='mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl overflow-hidden border border-border/30'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-0'>
+            {/* Image Side - Replace with your actual choma platter image */}
+            <div className='relative h-64 md:h-auto'>
+              <img
+                src={Food} // Replace with your image path
+                alt='Delicious Choma Platter Mix'
+                className='w-full h-full object-cover'
+              />
+              <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
+            </div>
+
+            {/* Content Side */}
+            <div className='p-8 flex flex-col justify-center items-center text-center'>
+              <div className='mb-4'>
+                <span className='text-sm font-semibold text-primary tracking-widest'>
+                  SUPER
+                </span>
+                <h3 className='text-3xl font-bold text-foreground mt-2'>
+                  ShanVill RESORT
+                </h3>
+              </div>
+
+              <div className='my-4'>
+                <p className='text-xl font-medium text-foreground'>
+                  Delicious Choma Platter Mix
+                </p>
+                <p className='text-2xl font-bold text-primary mt-2'>
+                  KSh 2,500
+                </p>
+              </div>
+
+              <Button
+                variant='hero'
+                size='lg'
+                onClick={() => window.open('tel:0111427894', '_self')}
+                className='mt-4 w-full max-w-xs'
+              >
+                <Phone className='w-5 h-5 mr-2' />
+                ORDER NOW
+              </Button>
+
+              <p className='mt-4 text-muted-foreground'>Call: 0111427894</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Then follow with your Cocktails Section */}
+        {/* Cocktails Section */}
+        <div className='my-16'>
+          <div className='text-center mb-12'>
+            <h3 className='text-3xl font-bold text-foreground mb-4'>
+              Signature Cocktails
+            </h3>
+            <p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
+              Crafted to perfection by our expert mixologists
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {/* Ginita Cocktail */}
+            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
+              <div className='relative h-64'>
+                <img
+                  src={Ginita}
+                  alt='Ginita Cocktail'
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
+                  <h4 className='text-xl font-bold text-white'>
+                    Ginita Cocktail
+                  </h4>
+                </div>
+              </div>
+              <CardContent className='p-4 text-center'>
+                <p className='text-muted-foreground'>
+                  Refreshing gin-based cocktail with tropical fruit notes
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Eggziting Cocktail */}
+            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
+              <div className='relative h-64'>
+                <img
+                  src={EggTizing}
+                  alt='Eggziting Cocktail'
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
+                  <h4 className='text-xl font-bold text-white'>
+                    Eggziting Cocktail
+                  </h4>
+                </div>
+              </div>
+              <CardContent className='p-4 text-center'>
+                <p className='text-muted-foreground'>
+                  Creamy egg-based cocktail with a hint of spice
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Spring Fever Cocktail */}
+            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
+              <div className='relative h-64'>
+                <img
+                  src={Spring}
+                  alt='Spring Fever Cocktail'
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
+                  <h4 className='text-xl font-bold text-white'>
+                    Spring Fever Cocktail
+                  </h4>
+                </div>
+              </div>
+              <CardContent className='p-4 text-center'>
+                <p className='text-muted-foreground'>
+                  Floral and citrusy blend perfect for warm evenings
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Virgin Mary Cocktail */}
+            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
+              <div className='relative h-64'>
+                <img
+                  src={Sunset}
+                  alt='Virgin Mary Cocktail'
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
+                  <h4 className='text-xl font-bold text-white'>
+                    Virgin Mary Cocktail
+                  </h4>
+                </div>
+              </div>
+              <CardContent className='p-4 text-center'>
+                <p className='text-muted-foreground'>
+                  Spicy non-alcoholic twist on the classic
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Cocktail CTA */}
+          <div className='text-center mt-12'>
+            <Button
+              variant='elegant'
+              size='lg'
+              onClick={() => window.open('tel:0111427894', '_self')}
+            >
+              <Phone className='w-5 h-5 mr-2' />
+              Call to Reserve Your Favorite Cocktail
+            </Button>
+          </div>
         </div>
         {/* Featured Facilities - Updated for mobile */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
