@@ -17,7 +17,7 @@ const ContactSection = () => {
             Get in Touch
           </h2>
           <p className='text-xl text-white/90 max-w-3xl mx-auto leading-relaxed'>
-            Ready to experience the finest hospitality at Shanvilla Hotel?
+            Ready to experience the finest hospitality at Shanvilla Resort?
             Contact us today to make your reservation.
           </p>
         </div>

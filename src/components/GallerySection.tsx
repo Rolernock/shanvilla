@@ -14,7 +14,7 @@ import Food from '/images/fd.webp'
 const galleryImages = [
   {
     src: '/images/1.webp',
-    alt: 'Hotel exterior view with cars and tropical plants',
+    alt: 'Resort exterior view with cars and tropical plants',
     title: 'Tranquil exterier view with tropical plants'
   },
   {
@@ -73,7 +73,7 @@ const GallerySection = () => {
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
             Discover our beautifully designed spaces, from elegant dining areas
             to comfortable lounges and serene outdoor terraces. Every corner of
-            Shanvilla Hotel tells a story of comfort and style.
+            Shanvilla Resort tells a story of comfort and style.
           </p>
         </div>
         {/* Gallery Grid - unchanged */}
@@ -107,7 +107,7 @@ const GallerySection = () => {
                   {/* Constrains maximum width */}
                   <img
                     src={DJNight}
-                    alt='Weekend DJ entertainment at Shanvilla Hotel'
+                    alt='Weekend DJ entertainment at Shanvilla Resort'
                     className='w-full h-auto max-h-[400px] object-contain md:object-cover'
                   />
                 </div>
@@ -448,7 +448,7 @@ const GallerySection = () => {
             <div className='relative w-full md:w-1/2 h-64 md:h-auto min-h-[300px]'>
               <img
                 src={TeamPhoto}
-                alt='Shanvilla Hotel professional team'
+                alt='Shanvilla Resort professional team'
                 className='w-full h-full object-cover object-center'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
@@ -463,7 +463,7 @@ const GallerySection = () => {
                 </h3>
               </div>
               <p className='text-muted-foreground mb-4 md:mb-6 leading-relaxed'>
-                At Shanvilla Hotel, our greatest asset is our team of
+                At Shanvilla Resort, our greatest asset is our team of
                 hospitality professionals committed to providing exceptional
                 service with a warm Kenyan welcome.
               </p>
@@ -479,7 +479,7 @@ const GallerySection = () => {
             </h3>
             <p className='text-muted-foreground mb-6'>
               Our team is ready to welcome you to an unforgettable stay at
-              Shanvilla Hotel.
+              Shanvilla Resort.
             </p>
             <Button
               variant='hero'

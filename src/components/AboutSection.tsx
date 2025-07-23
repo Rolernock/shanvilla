@@ -6,10 +6,11 @@ const serviceCategories = [
     title: 'Accommodation',
     icon: Bed,
     services: [
-      'Executive Rooms',
-      'VIP Suites',
-      'Free Room Service for VIP & Excecutive Rooms',
-      'Late Checkout'
+      'Standard Room',
+      'Deluxe Room',
+      'Executive Room',
+      'Superior Room',
+      'V.I.P Room'
     ]
   },
   {
@@ -69,7 +70,7 @@ const AboutSection = () => {
             Our Comprehensive Services
           </h2>
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
-            Shanvilla Hotel offers premium hospitality services tailored for
+            Shanvilla Resort offers premium hospitality services tailored for
             both leisure and business needs in the heart of Murang'a.
           </p>
         </div>

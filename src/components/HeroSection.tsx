@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className='absolute inset-0'>
         <img
           src={heroImage}
-          alt='Shanvilla Hotel elegant lounge with modern seating'
+          alt='Shanvilla Resort elegant lounge with modern seating'
           className='w-full h-full object-cover'
         />
         <div className='absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent'></div>

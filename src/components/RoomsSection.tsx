@@ -65,7 +65,7 @@ const RoomsSection = () => {
               {/* Content */}
               <CardContent className='p-8 lg:p-12 flex flex-col justify-center'>
                 <h3 className='text-3xl font-bold text-foreground mb-6'>
-                  Executive Suite
+                  V.I.P Room
                 </h3>
 
                 <p className='text-lg text-muted-foreground mb-8 leading-relaxed'>
