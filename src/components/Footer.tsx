@@ -98,7 +98,7 @@ const Footer = () => {
                 Instagram
               </a>
               <a
-                href='https://www.tiktok.com/discover/shanvillaresort1'
+                href='https://vm.tiktok.com/ZMS7d8Y1S/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='flex items-center gap-2 text-background/80 hover:text-primary-glow transition-colors text-sm'
