@@ -30,7 +30,7 @@ const galleryImages = [
   {
     src: '/images/7.webp',
     alt: 'QODE 4 club area with ambient lighting and elegant bar',
-    title: 'QODE 4 Section with ambient lighting and elegant bar'
+    title: 'QODE 4 Club with ambient lighting and elegant bar'
   },
   {
     src: '/images/9.webp',
@@ -55,7 +55,7 @@ const galleryImages = [
   {
     src: '/images/3.webp',
     alt: 'Modern bar interior with wooden counter, neon ShanVille sign, and stocked shelves',
-    title: 'ShanVille Bar – Modern bar interior with wooden counter'
+    title: 'QODE 4 Club Counter – Modern bar interior with wooden counter'
   }
 ]
 
@@ -191,9 +191,7 @@ const GallerySection = () => {
                       <div className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center'>
                         <Users className='w-5 h-5 text-primary' />
                       </div>
-                      <span className='text-foreground'>
-                        Capacity: 70 guests
-                      </span>
+                      <span className='text-foreground'>Capacity: 70 pax</span>
                     </div>
 
                     <div className='flex items-center gap-3'>
