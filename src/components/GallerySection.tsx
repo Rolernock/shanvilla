@@ -60,9 +60,37 @@ const GallerySection = () => {
     <section className='py-16 md:py-20 bg-gradient-warm'>
       <div className='container mx-auto px-4 lg:px-4'>
         {/* Header - unchanged */}
-
+        <div className='text-center mb-16 animate-fade-in'>
+          <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
+            Experience Shanvilla
+          </h2>
+          <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
+            Discover our beautifully designed spaces, from elegant dining areas
+            to comfortable lounges and serene outdoor terraces. Every corner of
+            Shanvilla Hotel tells a story of comfort and style.
+          </p>
+        </div>
         {/* Gallery Grid - unchanged */}
-
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
+          {galleryImages.map((image, index) => (
+            <Card
+              key={index}
+              className='group overflow-hidden hover:shadow-warm transition-all duration-500 bg-card/80 backdrop-blur-sm border-border/50'
+            >
+              <div className='relative overflow-hidden'>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className='w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                <div className='absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100'>
+                  <h3 className='text-lg font-semibold'>{image.title}</h3>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
         {/* Featured Facilities - Updated for mobile */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           {/* Dining Experience - now full width on mobile */}
