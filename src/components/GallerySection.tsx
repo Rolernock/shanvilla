@@ -1,9 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Phone, Users, Smile } from 'lucide-react'
+import { Phone, Users, Music } from 'lucide-react'
 import Dining from '/images/11.webp'
 import outDoor from '/images/10.webp'
 import TeamPhoto from '/images/teamPhoto.webp'
+import DJNight from '/images/dj.webp'
 
 const galleryImages = [
   {
@@ -90,6 +91,61 @@ const GallerySection = () => {
               </div>
             </Card>
           ))}
+        </div>
+        {/* DJ night */}
+        <div className='mb-16 mt-12'>
+          <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
+            <div className='grid md:grid-cols-2 gap-0'>
+              <div className='relative overflow-hidden h-64 md:h-auto'>
+                <img
+                  src={DJNight}
+                  alt='Weekend DJ entertainment at Shanvilla Hotel'
+                  className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
+              </div>
+              <CardContent className='p-6 md:p-8 flex flex-col justify-center'>
+                <div className='flex items-center gap-3 mb-4'>
+                  <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center'>
+                    <Music className='w-6 h-6 text-primary' />
+                  </div>
+                  <h3 className='text-2xl font-bold text-foreground'>
+                    Weekend Vibes
+                  </h3>
+                </div>
+                <p className='text-muted-foreground mb-6 leading-relaxed'>
+                  Experience unforgettable nights with our weekend DJ
+                  entertainment:
+                </p>
+                <ul className='space-y-3 mb-8'>
+                  <li className='flex items-start gap-3'>
+                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                      F
+                    </span>
+                    <span className='text-foreground'>
+                      <strong>Friday</strong>
+                    </span>
+                  </li>
+                  <li className='flex items-start gap-3'>
+                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                      S
+                    </span>
+                    <span className='text-foreground'>
+                      <strong>Saturday</strong>
+                    </span>
+                  </li>
+                  <li className='flex items-start gap-3'>
+                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                      S
+                    </span>
+                    <span className='text-foreground'>
+                      <strong>Sunday</strong>
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </div>
+          </Card>
         </div>
         {/* Featured Facilities - Updated for mobile */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
@@ -184,6 +240,25 @@ const GallerySection = () => {
         </div>
 
         {/* Call to Action - unchanged */}
+        <div className='text-center mt-16'>
+          <div className='bg-primary/5 rounded-2xl p-8 max-w-2xl mx-auto border border-primary/10'>
+            <h3 className='text-2xl font-bold text-foreground mb-4'>
+              Ready to Experience Our Hospitality?
+            </h3>
+            <p className='text-muted-foreground mb-6'>
+              Our team is ready to welcome you to an unforgettable stay at
+              Shanvilla Hotel.
+            </p>
+            <Button
+              variant='hero'
+              size='lg'
+              onClick={() => window.open('tel:0111427894', '_self')}
+            >
+              <Phone className='w-5 h-5' />
+              Call 0111427894 to Book
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   )
