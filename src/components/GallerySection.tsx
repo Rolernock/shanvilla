@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Phone, Users, Music } from 'lucide-react'
+import { Phone, Users, Music, UtensilsCrossed } from 'lucide-react'
 import Dining from '/images/11.webp'
 import outDoor from '/images/10.webp'
 import TeamPhoto from '/images/teamPhoto.webp'
@@ -155,6 +155,70 @@ const GallerySection = () => {
               </CardContent>
             </div>
           </Card>
+        </div>
+        {/* Hall Section */}
+        {/* Conference Hall Section */}
+        <div className='mt-20'>
+          <div className='container mx-auto px-4'>
+            <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
+              <div className='grid md:grid-cols-2 gap-0'>
+                {/* Conference Hall Image */}
+                <div className='relative overflow-hidden h-80 md:h-auto'>
+                  <img
+                    src='/images/hall.webp'
+                    alt='Elegant conference hall at ShanVill Resort'
+                    className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
+                  />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
+                </div>
+
+                {/* Conference Hall Description */}
+                <CardContent className='p-8 md:p-10 flex flex-col justify-center'>
+                  <div className='mb-6'>
+                    <h3 className='text-3xl font-bold text-foreground mb-4'>
+                      Premium Event Space
+                    </h3>
+                    <p className='text-lg text-muted-foreground leading-relaxed'>
+                      A tastefully curated event space where comfort meets
+                      class—plush blue seating, natural light, and a refined
+                      buffet setup create the perfect ambiance for memorable
+                      gatherings.
+                    </p>
+                  </div>
+
+                  <div className='space-y-4'>
+                    <div className='flex items-center gap-3'>
+                      <div className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center'>
+                        <Users className='w-5 h-5 text-primary' />
+                      </div>
+                      <span className='text-foreground'>
+                        Capacity: 70 guests
+                      </span>
+                    </div>
+
+                    <div className='flex items-center gap-3'>
+                      <div className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center'>
+                        <UtensilsCrossed className='w-5 h-5 text-primary' />
+                      </div>
+                      <span className='text-foreground'>
+                        Custom catering available
+                      </span>
+                    </div>
+                  </div>
+
+                  <Button
+                    variant='elegant'
+                    size='lg'
+                    className='mt-8 w-full md:w-auto'
+                    onClick={() => window.open('tel:0111427894', '_self')}
+                  >
+                    <Phone className='w-5 h-5 mr-2' />
+                    Book Your Event
+                  </Button>
+                </CardContent>
+              </div>
+            </Card>
+          </div>
         </div>
         {/* Food Section */}
         {/* Choma Platter Promo Section */}
