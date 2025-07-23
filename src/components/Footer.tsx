@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className='bg-foreground text-background py-12'>
       <div className='container mx-auto px-4 lg:px-8'>
@@ -68,7 +69,6 @@ const Footer = () => {
             </h4>
             <ul className='space-y-2 text-background/80 text-sm mb-6'>
               <li>• Modern Style Rooms</li>
-              <li>• Room Service (VIP/Executive)</li>
               <li>• Late Checkout</li>
               <li>• Free Fast WiFi</li>
               <li>• 24/7 Reception</li>
@@ -132,7 +132,7 @@ const Footer = () => {
         <div className='border-t border-background/20 mt-8 pt-6'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             <p className='text-background/60 text-sm'>
-              © 2024 Shanvilla Resort. All rights reserved.
+              © {currentYear} Shanvilla Resort. All rights reserved.
             </p>
             <div className='flex items-center gap-4 text-sm text-background/60'>
               <span>Call for reservations: 0111427894</span>
