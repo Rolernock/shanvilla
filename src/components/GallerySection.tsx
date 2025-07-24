@@ -166,7 +166,7 @@ const GallerySection = () => {
                 <div className='relative overflow-hidden h-80 md:h-auto'>
                   <img
                     src='/images/hall.webp'
-                    alt='Elegant conference hall at ShanVill Resort'
+                    alt='Elegant conference hall at ShanVilla Resort'
                     className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
                   />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
@@ -239,7 +239,7 @@ const GallerySection = () => {
                   SUPER
                 </span>
                 <h3 className='text-3xl font-bold text-foreground mt-2'>
-                  ShanVill RESORT
+                  ShanVilla RESORT
                 </h3>
               </div>
 
