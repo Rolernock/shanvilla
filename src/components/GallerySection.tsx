@@ -173,7 +173,7 @@ const GallerySection = () => {
                 </div>
 
                 {/* Conference Hall Description */}
-                <CardContent className='p-8 md:p-10 flex flex-col justify-center'>
+                <CardContent className='py-8 md:p-10 flex flex-col justify-center'>
                   <div className='mb-6'>
                     <h3 className='text-3xl font-bold text-foreground mb-4'>
                       Premium Event Space
