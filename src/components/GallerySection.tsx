@@ -13,17 +13,17 @@ import Food from '/images/fd.webp'
 
 const galleryImages = [
   {
-    src: '/images/1.webp',
+    src: '/images/shanvillaresort-137.webp',
     alt: 'Resort exterior view with cars and tropical plants',
     title: 'Tranquil exterier view with tropical plants'
   },
   {
-    src: '/images/2.webp',
+    src: '/images/shanvillaresort-137.webp',
     alt: 'Vibrant lounge with colorful lighting and cozy seating',
     title: 'VIP Section with colorful lighting and cozy seats'
   },
   {
-    src: '/images/4.webp',
+    src: '/images/shanvillaresort-137.webp',
     alt: 'Stylish lounge area with vibrant lighting and modern bar stools',
     title: 'Stylish lounge area with modern bar stools'
   },
