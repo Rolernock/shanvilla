@@ -43,7 +43,7 @@ const galleryImages = [
     title: 'Beautiful outdoor terrace with vibrant lighting'
   },
   {
-    src: '/images/8.webp',
+    src: '/images/shanvillaresort-83.jpg',
     alt: 'Elegant bedroom with carved white bed frame, ambient lighting, and blue accents',
     title: 'Luxury Suite with Artistic Decor'
   },
