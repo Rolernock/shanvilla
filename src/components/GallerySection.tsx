@@ -1,10 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Phone, Users, Music, UtensilsCrossed } from 'lucide-react'
-import Dining from '/images/shanvillaresort-83.jpg'
-import outDoor from '/images/shanvillaresort-83.jpg'
+import Dining from '/images/shanvillaresort-153.webp'
+import outDoor from '/images/shanvillaresort-153.webp'
 import TeamPhoto from '/images/teamPhoto.webp'
-import DJNight from '/images/shanvillaresort-83.jpg'
+import DJNight from '/images/shanvillaresort-153.webp'
 import Sunset from '/images/1ct.webp'
 import Ginita from '/images/2ct.webp'
 import EggTizing from '/images/3ct.webp'
@@ -43,7 +43,7 @@ const galleryImages = [
     title: 'Beautiful outdoor terrace with vibrant lighting'
   },
   {
-    src: '/images/shanvillaresort-83.jpg',
+    src: '/images/shanvillaresort-153.webp',
     alt: 'Elegant bedroom with carved white bed frame, ambient lighting, and blue accents',
     title: 'Luxury Suite with Artistic Decor'
   },
