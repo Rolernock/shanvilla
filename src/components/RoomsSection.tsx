@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 
 import standardRoom from '/images/shanvillaresort-92.webp'
-import deluxeRoom from '/images/shanvillaresort-92.webp'
+import deluxeRoom from '/images/shanvillaresort-104.webp'
 import vipRoom from '/images/vip.webp'
 import bathroom from '/images/bathroom.webp'
 
