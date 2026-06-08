@@ -23,7 +23,7 @@ const galleryImages = [
     title: 'VIP Section with colorful lighting and cozy seats'
   },
   {
-    src: '/images/shanvillaresort-137.webp',
+    src: '/images/shanvillaresort-157.webp',
     alt: 'Stylish lounge area with vibrant lighting and modern bar stools',
     title: 'Stylish lounge area with modern bar stools'
   },
@@ -38,7 +38,7 @@ const galleryImages = [
     title: 'Garden Relaxation Area'
   },
   {
-    src: '/images/5.webp',
+    src: '/images/shanvillaresort-104.webp',
     alt: 'Beautiful outdoor terrace with ambient lighting',
     title: 'Beautiful outdoor terrace with vibrant lighting'
   },
