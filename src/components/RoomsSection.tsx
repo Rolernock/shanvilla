@@ -6,33 +6,68 @@ import {
   UtensilsCrossed,
   Bath,
   Car,
-  Phone
+  Phone,
+  Users
 } from 'lucide-react'
 
+import standardRoom from '/images/standard.webp'
 import deluxeRoom from '/images/deluxe.webp'
 import vipRoom from '/images/vip.webp'
 import bathroom from '/images/bathroom.webp'
 
-const roomFeatures = [
-  { icon: Bed, label: 'King Size Bed' },
-  { icon: Bath, label: 'Luxury Bathroom' },
-  { icon: Wifi, label: 'Free WiFi' },
-  { icon: UtensilsCrossed, label: 'Room Service' },
-  { icon: Car, label: 'Parking' }
-]
-
 const rooms = [
   {
-    title: 'Deluxe Room',
-    image: deluxeRoom,
+    title: 'Standard Room',
+    price: 'Ksh 3,500',
+    image: standardRoom,
+    featured: false,
     description:
-      'Enjoy a comfortable stay in our Deluxe Room featuring elegant interiors, a king-size bed, modern amenities, and a relaxing atmosphere perfect for business and leisure travelers.'
+      'Our Standard Room offers comfort and convenience at an affordable rate. Ideal for solo travelers and couples seeking a relaxing stay.',
+
+    features: [
+      { icon: Users, label: '2 Guests' },
+      { icon: Bed, label: 'Queen Size Bed' },
+      { icon: Bath, label: 'Private Bathroom' },
+      { icon: Wifi, label: 'Free WiFi' },
+      { icon: UtensilsCrossed, label: 'Room Service' },
+      { icon: Car, label: 'Free Parking' }
+    ]
   },
+
+  {
+    title: 'Deluxe Room',
+    price: 'Ksh 5,000',
+    image: deluxeRoom,
+    featured: true,
+    description:
+      'Experience elevated comfort in our Deluxe Room featuring spacious interiors, elegant furnishings, and premium amenities.',
+
+    features: [
+      { icon: Users, label: '3 Guests' },
+      { icon: Bed, label: 'King Size Bed' },
+      { icon: Bath, label: 'Luxury Bathroom' },
+      { icon: Wifi, label: 'Free WiFi' },
+      { icon: UtensilsCrossed, label: 'Room Service' },
+      { icon: Car, label: 'Free Parking' }
+    ]
+  },
+
   {
     title: 'V.I.P Room',
+    price: 'Ksh 8,000',
     image: vipRoom,
+    featured: false,
     description:
-      'Experience premium luxury in our VIP Room with spacious interiors, upgraded amenities, stylish décor, and exceptional comfort for a memorable stay.'
+      'Our VIP Room offers the ultimate luxury experience with spacious accommodation, premium furnishings, and exclusive amenities.',
+
+    features: [
+      { icon: Users, label: '4 Guests' },
+      { icon: Bed, label: 'Executive King Bed' },
+      { icon: Bath, label: 'Premium Bathroom' },
+      { icon: Wifi, label: 'High-Speed WiFi' },
+      { icon: UtensilsCrossed, label: 'VIP Room Service' },
+      { icon: Car, label: 'Reserved Parking' }
+    ]
   }
 ]
 
@@ -58,7 +93,7 @@ const RoomsSection = () => {
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
             Experience unparalleled comfort in our meticulously designed rooms,
             featuring premium amenities and elegant finishes for a memorable
-            stay.
+            stay at Shanvilla Resort.
           </p>
         </div>
 
@@ -69,8 +104,14 @@ const RoomsSection = () => {
               key={index}
               className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'
             >
-              <div className='grid lg:grid-cols-2 gap-0'>
-                {/* Images */}
+              <div
+                className={`grid lg:grid-cols-2 gap-0 ${
+                  index % 2 !== 0
+                    ? 'lg:[&>*:first-child]:order-2'
+                    : ''
+                }`}
+              >
+                {/* Image Section */}
                 <div className='relative'>
                   <div className='h-[400px] overflow-hidden'>
                     <img
@@ -87,30 +128,48 @@ const RoomsSection = () => {
                         alt='Luxury Bathroom'
                         className='w-full h-full object-cover hover:scale-110 transition-transform duration-500'
                       />
-                      <div className='absolute inset-0 bg-gradient-to-t from-black/10 to-transparent'></div>
+                      <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
                     </div>
 
-                    <div className='bg-foreground/5 flex items-center justify-center'>
+                    <div className='bg-primary/5 flex items-center justify-center'>
                       <div className='text-center p-4'>
                         <Bath className='w-10 h-10 mx-auto text-primary mb-2' />
 
                         <h4 className='font-semibold'>
-                          Spa-like Bathrooms
+                          Premium Bathrooms
                         </h4>
 
                         <p className='text-sm text-muted-foreground'>
-                          Premium fixtures & amenities
+                          Luxury fixtures & amenities
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Content */}
+                {/* Content Section */}
                 <CardContent className='p-8 lg:p-12 flex flex-col justify-center'>
-                  <h3 className='text-3xl font-bold text-foreground mb-6'>
+                  {room.featured && (
+                    <div className='mb-4'>
+                      <span className='bg-amber-500 text-white px-4 py-1 rounded-full text-sm font-semibold'>
+                        ⭐ Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <h3 className='text-3xl font-bold text-foreground mb-2'>
                     {room.title}
                   </h3>
+
+                  <div className='flex items-center gap-2 mb-6'>
+                    <span className='text-3xl font-bold text-primary'>
+                      {room.price}
+                    </span>
+
+                    <span className='text-muted-foreground'>
+                      / night
+                    </span>
+                  </div>
 
                   <p className='text-lg text-muted-foreground mb-8 leading-relaxed'>
                     {room.description}
@@ -118,7 +177,7 @@ const RoomsSection = () => {
 
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-4 mb-8'>
-                    {roomFeatures.map((feature, idx) => (
+                    {room.features.map((feature, idx) => (
                       <div
                         key={idx}
                         className='flex items-center gap-3'
@@ -134,7 +193,7 @@ const RoomsSection = () => {
                     ))}
                   </div>
 
-                  {/* CTA */}
+                  {/* CTA Buttons */}
                   <div className='flex flex-col sm:flex-row gap-4'>
                     <Button
                       variant='hero'
