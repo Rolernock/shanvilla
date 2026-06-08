@@ -18,7 +18,7 @@ const galleryImages = [
     title: 'Tranquil exterier view with tropical plants'
   },
   {
-    src: '/images/shanvillaresort-137.webp',
+    src: '/images/shanvillaresort-153.webp',
     alt: 'Vibrant lounge with colorful lighting and cozy seating',
     title: 'VIP Section with colorful lighting and cozy seats'
   },
