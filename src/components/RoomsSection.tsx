@@ -19,7 +19,7 @@ const RoomsSection = () => {
         {/* Header */}
         <div className='text-center mb-16 animate-fade-in'>
           <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
-            Luxury Accommodations
+            Affordable Accommodations
           </h2>
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
             Experience unparalleled comfort in our meticulously designed rooms,
