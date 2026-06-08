@@ -18,7 +18,7 @@ import bathroom from '/images/bathroom.webp'
 const rooms = [
   {
     title: 'Standard Room',
-    price: 'Ksh 3,500',
+    price: 'Ksh 4,500',
     image: standardRoom,
     featured: false,
     description:
@@ -36,7 +36,7 @@ const rooms = [
 
   {
     title: 'Deluxe Room',
-    price: 'Ksh 5,000',
+    price: 'Ksh 5,800',
     image: deluxeRoom,
     featured: true,
     description:
@@ -54,7 +54,7 @@ const rooms = [
 
   {
     title: 'V.I.P Room',
-    price: 'Ksh 8,000',
+    price: 'Ksh 7,500',
     image: vipRoom,
     featured: false,
     description:
