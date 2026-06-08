@@ -165,7 +165,7 @@ const GallerySection = () => {
                 {/* Conference Hall Image */}
                 <div className='relative overflow-hidden h-80 md:h-auto'>
                   <img
-                    src='/images/hall.webp'
+                    src='/images/shanvillaresort-140.webp'
                     alt='Elegant conference hall at ShanVilla Resort'
                     className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
                   />
