@@ -10,7 +10,7 @@ import {
   Users
 } from 'lucide-react'
 
-import standardRoom from '/images/shanvillaresort-84.webp'
+import standardRoom from '/images/shanvillaresort-92.webp'
 import deluxeRoom from '/images/shanvillaresort-95.webp'
 import vipRoom from '/images/vip.webp'
 import bathroom from '/images/bathroom.webp'
