@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Phone, MapPin, Wifi, Clock, UtensilsCrossed } from 'lucide-react'
-import heroImage from '/images/bg.webp'
+import heroImage from '/images/shanvillaresort%20road-2.webp'
 
 const HeroSection = () => {
   return (
