@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Phone, Users, Music, UtensilsCrossed } from 'lucide-react'
-import Dining from '/images/shanvillaresort-153.webp'
+import Dining from '/images/shanvillaresort-140.webp'
 import outDoor from '/images/shanvillaresort-153.webp'
 import TeamPhoto from '/images/teamPhoto.webp'
 import DJNight from '/images/shanvillaresort-153.webp'
@@ -191,7 +191,7 @@ const GallerySection = () => {
                       <div className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center'>
                         <Users className='w-5 h-5 text-primary' />
                       </div>
-                      <span className='text-foreground'>Capacity: 70 pax</span>
+                      <span className='text-foreground'>Capacity: 100 pax</span>
                     </div>
 
                     <div className='flex items-center gap-3'>
