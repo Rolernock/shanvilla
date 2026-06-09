@@ -14,7 +14,7 @@ import {
 /* ===============================
    STANDARD ROOM IMAGES
 ================================= */
-import standardRoom1 from '/images/standard-room-1.webp'
+import standardRoom1 from '/images/shanvillaresort-86.webp'
 import standardRoom2 from '/images/standard-room-2.webp'
 import standardBathroom from '/images/bathroom.webp'
 import standardAmenities from '/images/standard-amenities.webp'
@@ -24,7 +24,7 @@ import standardView from '/images/standard-view.webp'
 /* ===============================
    DELUXE ROOM IMAGES
 ================================= */
-import deluxeRoom1 from '/images/deluxe-room-1.webp'
+import deluxeRoom1 from '/images/shanvillaresort-86.webp'
 import deluxeRoom2 from '/images/deluxe-room-2.webp'
 import deluxeBathroom from '/images/bathroom.webp'
 import deluxeAmenities from '/images/deluxe-amenities.webp'
@@ -34,7 +34,7 @@ import deluxeView from '/images/deluxe-view.webp'
 /* ===============================
    VIP ROOM IMAGES
 ================================= */
-import vipRoom1 from '/images/vip-room-1.webp'
+import vipRoom1 from '/images/shanvillaresort-86.webp'
 import vipRoom2 from '/images/vip-room-2.webp'
 import vipBathroom from '/images/bathroom.webp'
 import vipAmenities from '/images/vip-amenities.webp'
