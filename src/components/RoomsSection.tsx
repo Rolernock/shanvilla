@@ -16,7 +16,7 @@ import {
 ================================= */
 import standardRoom1 from '/images/standard-room-1.webp'
 import standardRoom2 from '/images/standard-room-2.webp'
-import standardBathroom from '/images/standard-bathroom.webp'
+import standardBathroom from '/images/bathroom.webp'
 import standardAmenities from '/images/standard-amenities.webp'
 import standardDesk from '/images/standard-desk.webp'
 import standardView from '/images/standard-view.webp'
