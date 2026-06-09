@@ -64,98 +64,213 @@ const galleryImages = [
 const GallerySection = () => {
   return (
     <section className='py-16 md:py-20 bg-gradient-warm'>
-      <div className='container mx-auto px-4 lg:px-4'>
-        {/* Header - unchanged */}
-        <div className='text-center mb-16 animate-fade-in'>
-          <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
-            Experience Shanvilla
-          </h2>
-          <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
-            Discover our beautifully designed spaces, from elegant dining areas
-            to comfortable lounges and serene outdoor terraces. Every corner of
-            Shanvilla Resort tells a story of comfort and style.
-          </p>
-        </div>
-        {/* Gallery Grid - unchanged */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
-          {galleryImages.map((image, index) => (
-            <Card
-              key={index}
-              className='group overflow-hidden hover:shadow-warm transition-all duration-500 bg-card/80 backdrop-blur-sm border-border/50'
-            >
-              <div className='relative overflow-hidden'>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className='w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                <div className='absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100'>
-                  <h3 className='text-lg font-semibold'>{image.title}</h3>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-        {/* DJ night */}
-        <div className='mb-16 mt-12'>
-          <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
-            <div className='flex flex-col md:flex-row'>
-              <div className='relative w-full md:w-1/2 flex justify-center bg-gray-100 dark:bg-gray-800'>
-                <div className='w-full max-w-lg'>
-                  {' '}
-                  {/* Constrains maximum width */}
-                  <img
-                    src={DJNight}
-                    alt='Weekend DJ entertainment at Shanvilla Resort'
-                    className='w-full h-auto max-h-[400px] object-contain md:object-cover'
-                  />
-                </div>
-                <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent'></div>
-              </div>
-              <CardContent className='p-6 md:p-8 flex flex-col justify-center'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center'>
-                    <Music className='w-6 h-6 text-primary' />
-                  </div>
-                  <h3 className='text-2xl font-bold text-foreground'>
-                    Weekend Vibes
-                  </h3>
-                </div>
-                <p className='text-muted-foreground mb-6 leading-relaxed'>
-                  Experience unforgettable nights with our weekend DJ
-                  entertainment:
-                </p>
-                <ul className='space-y-3 mb-8'>
-                  <li className='flex items-start gap-3'>
-                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
-                      F
-                    </span>
-                    <span className='text-foreground'>
-                      <strong>Friday</strong>
-                    </span>
-                  </li>
-                  <li className='flex items-start gap-3'>
-                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
-                      S
-                    </span>
-                    <span className='text-foreground'>
-                      <strong>Saturday</strong>
-                    </span>
-                  </li>
-                  <li className='flex items-start gap-3'>
-                    <span className='inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary rounded-full text-sm font-medium'>
-                      S
-                    </span>
-                    <span className='text-foreground'>
-                      <strong>Sunday</strong>
-                    </span>
-                  </li>
-                </ul>
-              </CardContent>
+  <div className='container mx-auto px-4 lg:px-8'>
+    {/* Header */}
+    <div className='text-center mb-16 animate-fade-in'>
+      <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
+        Experience Shanvilla Resort
+      </h2>
+
+      <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
+        Discover luxury accommodation, exceptional dining, signature
+        cocktails, unforgettable events and vibrant entertainment at
+        Shanvilla Resort, Maragua.
+      </p>
+    </div>
+
+    {/* Hero Showcase */}
+    <Card className='overflow-hidden border-0 shadow-2xl mb-16'>
+      <div className='relative h-[550px]'>
+        <img
+          src={HeroResort}
+          alt='Shanvilla Resort'
+          className='w-full h-full object-cover'
+        />
+
+        <div className='absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent' />
+
+        <div className='absolute inset-0 flex items-center'>
+          <div className='max-w-2xl px-8 lg:px-16 text-white'>
+            <span className='bg-primary px-4 py-2 rounded-full text-sm font-semibold'>
+              Welcome to Shanvilla Resort
+            </span>
+
+            <h2 className='text-4xl md:text-6xl font-bold mt-6 mb-6'>
+              Where Comfort Meets
+              <br />
+              Memorable Experiences
+            </h2>
+
+            <p className='text-lg md:text-xl text-white/90 mb-8'>
+              Whether you're travelling, dining, celebrating or
+              simply relaxing, Shanvilla Resort offers the perfect
+              atmosphere for every occasion.
+            </p>
+
+            <div className='flex flex-wrap gap-4'>
+              <Button
+                variant='hero'
+                size='lg'
+                onClick={() =>
+                  (window.location.href =
+                    'mailto:reception@shanvillaresortkenya.co.ke')
+                }
+              >
+                Book Your Stay
+              </Button>
+
+              <Button
+                variant='outline'
+                size='lg'
+                className='bg-white/10 border-white text-white hover:bg-white hover:text-black'
+                onClick={() =>
+                  window.open('tel:+254111427894', '_self')
+                }
+              >
+                Call Us
+              </Button>
             </div>
-          </Card>
+          </div>
         </div>
+      </div>
+    </Card>
+
+    {/* Resort Experiences */}
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20'>
+      {[
+        {
+          image: Accommodation,
+          title: 'Luxury Accommodation',
+          badge: 'Stay',
+          description:
+            'Enjoy Standard, Deluxe and VIP rooms designed for comfort and relaxation.'
+        },
+        {
+          image: Restaurant,
+          title: 'Fine Dining',
+          badge: 'Dine',
+          description:
+            'Delicious local and international cuisine prepared by experienced chefs.'
+        },
+        {
+          image: Cocktails,
+          title: 'Signature Cocktails',
+          badge: 'Bar',
+          description:
+            'Handcrafted cocktails, mocktails and premium beverages served daily.'
+        },
+        {
+          image: Conference,
+          title: 'Meetings & Conferences',
+          badge: 'Business',
+          description:
+            'Professional facilities ideal for corporate meetings and workshops.'
+        },
+        {
+          image: Events,
+          title: 'Events & Celebrations',
+          badge: 'Events',
+          description:
+            'Perfect venue for weddings, graduations, birthdays and private parties.'
+        },
+        {
+          image: DJNight,
+          title: 'Weekend Entertainment',
+          badge: 'Lifestyle',
+          description:
+            'Live DJs, themed nights and vibrant weekend experiences every week.'
+        }
+      ].map((item, index) => (
+        <Card
+          key={index}
+          className='group overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500'
+        >
+          <div className='relative h-80 overflow-hidden'>
+            <img
+              src={item.image}
+              alt={item.title}
+              className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-700'
+            />
+
+            <div className='absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent' />
+
+            <div className='absolute top-4 left-4'>
+              <span className='bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold'>
+                {item.badge}
+              </span>
+            </div>
+
+            <div className='absolute bottom-0 p-6 text-white'>
+              <h3 className='text-2xl font-bold mb-2'>
+                {item.title}
+              </h3>
+
+              <p className='text-white/90'>
+                {item.description}
+              </p>
+            </div>
+          </div>
+        </Card>
+      ))}
+    </div>
+
+    {/* Entertainment Section */}
+    <Card className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'>
+      <div className='flex flex-col md:flex-row'>
+        <div className='relative w-full md:w-1/2'>
+          <img
+            src={DJNight}
+            alt='Weekend Entertainment'
+            className='w-full h-full object-cover min-h-[400px]'
+          />
+
+          <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent' />
+        </div>
+
+        <CardContent className='p-8 flex flex-col justify-center'>
+          <div className='flex items-center gap-3 mb-4'>
+            <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center'>
+              <Music className='w-6 h-6 text-primary' />
+            </div>
+
+            <h3 className='text-3xl font-bold text-foreground'>
+              Shanvilla Nightlife Experience
+            </h3>
+          </div>
+
+          <p className='text-muted-foreground mb-6 leading-relaxed text-lg'>
+            Experience vibrant evenings with live DJs, themed nights,
+            great food, premium cocktails and unforgettable
+            entertainment every weekend.
+          </p>
+
+          <div className='space-y-4'>
+            <div className='flex items-center gap-3'>
+              <span className='w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold'>
+                F
+              </span>
+              <span>Friday Party Nights</span>
+            </div>
+
+            <div className='flex items-center gap-3'>
+              <span className='w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold'>
+                S
+              </span>
+              <span>Saturday DJ Experience</span>
+            </div>
+
+            <div className='flex items-center gap-3'>
+              <span className='w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold'>
+                S
+              </span>
+              <span>Sunday Chill Sessions</span>
+            </div>
+          </div>
+        </CardContent>
+      </div>
+    </Card>
+  </div>
+</section>
         {/* Hall Section */}
         {/* Conference Hall Section */}
         <div className='mt-20'>
