@@ -269,101 +269,130 @@ const GallerySection = () => {
 
         {/* Then follow with your Cocktails Section */}
         {/* Cocktails Section */}
-        <div className='my-16'>
-          <div className='text-center mb-12'>
-            <h3 className='text-3xl font-bold text-foreground mb-4'>
-              Signature Cocktails
-            </h3>
-            <p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
-              Crafted to perfection by our expert mixologists
-            </p>
-          </div>
+        import Autoplay from 'embla-carousel-autoplay'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
+import { Button } from '@/components/ui/button'
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {/* Ginita Cocktail */}
-            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
-              <div className='relative h-64'>
-                <img
-                  src={Ginita}
-                  alt='Ginita Cocktail'
-                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
-                  <h4 className='text-xl font-bold text-white'>
-                    Ginita Cocktail
-                  </h4>
+const cocktails = [
+  {
+    image: Ginita,
+    name: 'Ginita Cocktail',
+    description:
+      'Refreshing gin-based cocktail infused with tropical fruit flavors.',
+    tag: 'Customer Favorite'
+  },
+  {
+    image: EggTizing,
+    name: 'Eggziting Cocktail',
+    description:
+      'A rich creamy cocktail blended with exotic spices and smooth textures.',
+    tag: 'New Arrival'
+  },
+  {
+    image: Spring,
+    name: 'Spring Fever Cocktail',
+    description:
+      'A floral citrus masterpiece crafted for unforgettable evenings.',
+    tag: 'Signature Drink'
+  },
+  {
+    image: Sunset,
+    name: 'Virgin Mary',
+    description:
+      'A refreshing alcohol-free delight bursting with bold flavors.',
+    tag: 'Mocktail Special'
+  }
+]
+
+<div className='my-20'>
+  <div className='text-center mb-10'>
+    <h3 className='text-4xl font-bold text-foreground mb-4'>
+      Signature Cocktails
+    </h3>
+
+    <p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
+      Discover handcrafted cocktails, mocktails and premium beverages
+      prepared by our expert mixologists at Shanvilla Resort.
+    </p>
+  </div>
+
+  <Carousel
+    opts={{
+      loop: true
+    }}
+    plugins={[
+      Autoplay({
+        delay: 4000
+      })
+    ]}
+    className='w-full'
+  >
+    <CarouselContent>
+      {cocktails.map((cocktail, index) => (
+        <CarouselItem key={index}>
+          <Card className='overflow-hidden border-0 shadow-xl'>
+            <div className='relative h-[550px]'>
+              <img
+                src={cocktail.image}
+                alt={cocktail.name}
+                className='w-full h-full object-cover'
+              />
+
+              {/* Dark Overlay */}
+              <div className='absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent' />
+
+              {/* Content */}
+              <div className='absolute inset-0 flex items-center'>
+                <div className='max-w-xl px-8 lg:px-16 text-white'>
+                  <span className='inline-block bg-primary px-4 py-2 rounded-full text-sm font-semibold mb-4'>
+                    {cocktail.tag}
+                  </span>
+
+                  <h3 className='text-4xl md:text-6xl font-bold mb-4'>
+                    {cocktail.name}
+                  </h3>
+
+                  <p className='text-lg md:text-xl mb-8 text-white/90'>
+                    {cocktail.description}
+                  </p>
+
+                  <div className='flex flex-wrap gap-4'>
+                    <Button
+                      size='lg'
+                      variant='hero'
+                      onClick={() =>
+                        window.open('tel:+254111427894', '_self')
+                      }
+                    >
+                      Order Now
+                    </Button>
+
+                    <Button
+                      size='lg'
+                      variant='outline'
+                      className='bg-white/10 text-white border-white hover:bg-white hover:text-black'
+                    >
+                      Visit Our Bar
+                    </Button>
+                  </div>
                 </div>
               </div>
-              <CardContent className='p-4 text-center'>
-                <p className='text-muted-foreground'>
-                  Refreshing gin-based cocktail with tropical fruit notes
-                </p>
-              </CardContent>
-            </Card>
+            </div>
+          </Card>
+        </CarouselItem>
+      ))}
+    </CarouselContent>
 
-            {/* Eggziting Cocktail */}
-            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
-              <div className='relative h-64'>
-                <img
-                  src={EggTizing}
-                  alt='Eggziting Cocktail'
-                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
-                  <h4 className='text-xl font-bold text-white'>
-                    Eggziting Cocktail
-                  </h4>
-                </div>
-              </div>
-              <CardContent className='p-4 text-center'>
-                <p className='text-muted-foreground'>
-                  Creamy egg-based cocktail with a hint of spice
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Spring Fever Cocktail */}
-            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
-              <div className='relative h-64'>
-                <img
-                  src={Spring}
-                  alt='Spring Fever Cocktail'
-                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
-                  <h4 className='text-xl font-bold text-white'>
-                    Spring Fever Cocktail
-                  </h4>
-                </div>
-              </div>
-              <CardContent className='p-4 text-center'>
-                <p className='text-muted-foreground'>
-                  Floral and citrusy blend perfect for warm evenings
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Virgin Mary Cocktail */}
-            <Card className='overflow-hidden group hover:shadow-glow transition-all duration-300'>
-              <div className='relative h-64'>
-                <img
-                  src={Sunset}
-                  alt='Virgin Mary Cocktail'
-                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4'>
-                  <h4 className='text-xl font-bold text-white'>
-                    Virgin Mary Cocktail
-                  </h4>
-                </div>
-              </div>
-              <CardContent className='p-4 text-center'>
-                <p className='text-muted-foreground'>
-                  Spicy non-alcoholic twist on the classic
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+    <CarouselPrevious className='left-4' />
+    <CarouselNext className='right-4' />
+  </Carousel>
+</div>
 
           {/* Cocktail CTA */}
           <div className='text-center mt-12'>
