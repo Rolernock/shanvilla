@@ -11,6 +11,12 @@ import EggTizing from '/images/3ct.webp'
 import Spring from '/images/4ct.webp'
 import Food from '/images/fd.webp'
 
+const HeroResort = '/images/shanvillaresort-137.webp'
+const Accommodation = '/images/shanvillaresort-157.webp'
+const Restaurant = '/images/shanvillaresort-153.webp'
+const Cocktails = '/images/shanvillaresort-104.webp'
+const Conference = '/images/fd.webp'
+const Events = '/images/1ct.webp'
 const galleryImages = [
   {
     src: '/images/shanvillaresort-137.webp',
