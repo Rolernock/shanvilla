@@ -1,3 +1,4 @@
+```jsx
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import {
@@ -7,22 +8,57 @@ import {
   Bath,
   Car,
   Phone,
-  Users
+  Users,
+  MessageCircle
 } from 'lucide-react'
 
-import standardRoom from '/images/shanvillaresort-92.webp'
-import deluxeRoom from '/images/shanvillaresort-104.webp'
-import vipRoom from '/images/vip.webp'
-import bathroom from '/images/bathroom.webp'
+/* ===============================
+   STANDARD ROOM IMAGES
+================================= */
+import standardRoom1 from '/images/standard-room-1.webp'
+import standardRoom2 from '/images/standard-room-2.webp'
+import standardBathroom from '/images/standard-bathroom.webp'
+import standardAmenities from '/images/standard-amenities.webp'
+import standardDesk from '/images/standard-desk.webp'
+import standardView from '/images/standard-view.webp'
+
+/* ===============================
+   DELUXE ROOM IMAGES
+================================= */
+import deluxeRoom1 from '/images/deluxe-room-1.webp'
+import deluxeRoom2 from '/images/deluxe-room-2.webp'
+import deluxeBathroom from '/images/deluxe-bathroom.webp'
+import deluxeAmenities from '/images/deluxe-amenities.webp'
+import deluxeDesk from '/images/deluxe-desk.webp'
+import deluxeView from '/images/deluxe-view.webp'
+
+/* ===============================
+   VIP ROOM IMAGES
+================================= */
+import vipRoom1 from '/images/vip-room-1.webp'
+import vipRoom2 from '/images/vip-room-2.webp'
+import vipBathroom from '/images/vip-bathroom.webp'
+import vipAmenities from '/images/vip-amenities.webp'
+import vipLounge from '/images/vip-lounge.webp'
+import vipView from '/images/vip-view.webp'
 
 const rooms = [
   {
     title: 'Standard Room',
     price: 'Ksh 4,500',
-    image: standardRoom,
     featured: false,
+
+    images: [
+      standardRoom1,
+      standardRoom2,
+      standardBathroom,
+      standardAmenities,
+      standardDesk,
+      standardView
+    ],
+
     description:
-      'Our Standard Room offers comfort and convenience at an affordable rate. Ideal for solo travelers and couples seeking a relaxing stay.',
+      'Relax in our stylish Standard Room featuring a comfortable queen-size bed, modern private bathroom, complimentary high-speed WiFi, room service, and secure parking. Perfect for business travelers, couples, and guests seeking exceptional value.',
 
     features: [
       { icon: Users, label: '2 Guests' },
@@ -37,10 +73,19 @@ const rooms = [
   {
     title: 'Deluxe Room',
     price: 'Ksh 5,800',
-    image: deluxeRoom,
     featured: true,
+
+    images: [
+      deluxeRoom1,
+      deluxeRoom2,
+      deluxeBathroom,
+      deluxeAmenities,
+      deluxeDesk,
+      deluxeView
+    ],
+
     description:
-      'Experience elevated comfort in our Deluxe Room featuring spacious interiors, elegant furnishings, and premium amenities.',
+      'Experience superior comfort in our Deluxe Room with spacious interiors, a luxurious king-size bed, elegant décor, premium bathroom amenities, and personalized service designed for a truly relaxing stay.',
 
     features: [
       { icon: Users, label: '3 Guests' },
@@ -55,10 +100,19 @@ const rooms = [
   {
     title: 'V.I.P Room',
     price: 'Ksh 7,500',
-    image: vipRoom,
     featured: false,
+
+    images: [
+      vipRoom1,
+      vipRoom2,
+      vipBathroom,
+      vipAmenities,
+      vipLounge,
+      vipView
+    ],
+
     description:
-      'Our VIP Room offers the ultimate luxury experience with spacious accommodation, premium furnishings, and exclusive amenities.',
+      'Indulge in the finest accommodation at Shanvilla Resort. Our VIP Room offers spacious luxury, executive furnishings, enhanced privacy, premium amenities, and exclusive services for guests who expect the very best.',
 
     features: [
       { icon: Users, label: '4 Guests' },
@@ -81,87 +135,104 @@ const RoomsSection = () => {
     window.open('tel:+254111427894', '_self')
   }
 
+  const handleWhatsApp = () => {
+    window.open(
+      'https://wa.me/254111427894?text=Hello%20Shanvilla%20Resort,%20I%20would%20like%20to%20book%20a%20room.',
+      '_blank'
+    )
+  }
+
   return (
     <section className='py-20 bg-background'>
       <div className='container mx-auto px-4 lg:px-8'>
         {/* Header */}
-        <div className='text-center mb-16 animate-fade-in'>
+        <div className='text-center mb-16'>
           <h2 className='text-4xl md:text-5xl font-bold text-foreground mb-6'>
-            Affordable Accommodations
+            Luxury Accommodation at Shanvilla Resort
           </h2>
 
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed'>
-            Experience unparalleled comfort in our meticulously designed rooms,
-            featuring premium amenities and elegant finishes for a memorable
-            stay at Shanvilla Resort.
+            Discover comfort, elegance and exceptional hospitality in our
+            thoughtfully designed rooms. Whether you're travelling for business
+            or leisure, Shanvilla offers the perfect stay.
           </p>
         </div>
 
-        {/* Rooms */}
-        <div className='max-w-6xl mx-auto space-y-12'>
+        <div className='max-w-7xl mx-auto space-y-12'>
           {rooms.map((room, index) => (
             <Card
               key={index}
-              className='overflow-hidden shadow-warm hover:shadow-glow transition-all duration-500 bg-gradient-warm border-border/50'
+              className='overflow-hidden border-border/50 shadow-lg hover:shadow-xl transition-all duration-500'
             >
               <div
-                className={`grid lg:grid-cols-2 gap-0 ${
+                className={`grid lg:grid-cols-2 ${
                   index % 2 !== 0
                     ? 'lg:[&>*:first-child]:order-2'
                     : ''
                 }`}
               >
-                {/* Image Section */}
-                <div className='relative'>
-                  <div className='h-[400px] overflow-hidden'>
-                    <img
-                      src={room.image}
-                      alt={room.title}
-                      className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
-                    />
-                  </div>
+                {/* ==========================================
+                    HOTEL STYLE 6 IMAGE GALLERY
+                =========================================== */}
+                <div className='p-3 bg-muted/20'>
+                  <div className='grid grid-cols-3 gap-2 h-[650px]'>
 
-                  <div className='grid grid-cols-2 h-[200px]'>
-                    <div className='relative overflow-hidden'>
+                    {/* Main Hero Image */}
+                    <div className='col-span-2 row-span-2 overflow-hidden rounded-xl'>
                       <img
-                        src={bathroom}
-                        alt='Luxury Bathroom'
-                        className='w-full h-full object-cover hover:scale-110 transition-transform duration-500'
+                        src={room.images[0]}
+                        alt={room.title}
+                        className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
                       />
-                      <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>
                     </div>
 
-                    <div className='bg-primary/5 flex items-center justify-center'>
-                      <div className='text-center p-4'>
-                        <Bath className='w-10 h-10 mx-auto text-primary mb-2' />
-
-                        <h4 className='font-semibold'>
-                          Premium Bathrooms
-                        </h4>
-
-                        <p className='text-sm text-muted-foreground'>
-                          Luxury fixtures & amenities
-                        </p>
+                    {/* Small Gallery Images */}
+                    {room.images.slice(1, 5).map((image, idx) => (
+                      <div
+                        key={idx}
+                        className='overflow-hidden rounded-xl'
+                      >
+                        <img
+                          src={image}
+                          alt={`${room.title}-${idx}`}
+                          className='w-full h-full object-cover hover:scale-110 transition-transform duration-500'
+                        />
                       </div>
+                    ))}
+
+                    {/* Last Tile */}
+                    <div className='bg-primary text-primary-foreground rounded-xl flex flex-col items-center justify-center p-4 text-center'>
+                      <Bed className='w-10 h-10 mb-3' />
+
+                      <h4 className='font-bold text-lg'>
+                        Luxury Stay
+                      </h4>
+
+                      <p className='text-sm opacity-90'>
+                        Comfort • Elegance • Value
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Content Section */}
+                {/* ==========================================
+                    CONTENT
+                =========================================== */}
                 <CardContent className='p-8 lg:p-12 flex flex-col justify-center'>
+
                   {room.featured && (
                     <div className='mb-4'>
-                      <span className='bg-amber-500 text-white px-4 py-1 rounded-full text-sm font-semibold'>
-                        ⭐ Most Popular
+                      <span className='bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+                        ⭐ Most Popular Choice
                       </span>
                     </div>
                   )}
 
-                  <h3 className='text-3xl font-bold text-foreground mb-2'>
+                  <h3 className='text-3xl font-bold mb-3'>
                     {room.title}
                   </h3>
 
-                  <div className='flex items-center gap-2 mb-6'>
+                  <div className='flex items-center gap-3 mb-4'>
                     <span className='text-3xl font-bold text-primary'>
                       {room.price}
                     </span>
@@ -171,9 +242,29 @@ const RoomsSection = () => {
                     </span>
                   </div>
 
+                  <div className='inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6 w-fit'>
+                    🔥 Popular Accommodation at Shanvilla Resort
+                  </div>
+
                   <p className='text-lg text-muted-foreground mb-8 leading-relaxed'>
                     {room.description}
                   </p>
+
+                  {/* Included */}
+                  <div className='bg-primary/5 border border-primary/10 rounded-xl p-5 mb-8'>
+                    <h4 className='font-bold text-lg mb-4'>
+                      Included In Your Stay
+                    </h4>
+
+                    <div className='grid grid-cols-2 gap-3 text-sm'>
+                      <div>✓ Complimentary Breakfast</div>
+                      <div>✓ Free High-Speed WiFi</div>
+                      <div>✓ Secure Parking</div>
+                      <div>✓ Daily Housekeeping</div>
+                      <div>✓ Room Service</div>
+                      <div>✓ 24/7 Reception Support</div>
+                    </div>
+                  </div>
 
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-4 mb-8'>
@@ -182,11 +273,11 @@ const RoomsSection = () => {
                         key={idx}
                         className='flex items-center gap-3'
                       >
-                        <div className='w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center'>
+                        <div className='w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center'>
                           <feature.icon className='w-5 h-5 text-primary' />
                         </div>
 
-                        <span className='text-foreground font-medium'>
+                        <span className='font-medium'>
                           {feature.label}
                         </span>
                       </div>
@@ -194,24 +285,31 @@ const RoomsSection = () => {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className='flex flex-col sm:flex-row gap-4'>
+                  <div className='grid sm:grid-cols-3 gap-3'>
                     <Button
                       variant='hero'
                       size='lg'
-                      className='w-full sm:flex-1'
                       onClick={handleBooking}
                     >
-                      Book Now
+                      Reserve Your Stay
+                    </Button>
+
+                    <Button
+                      variant='outline'
+                      size='lg'
+                      onClick={handleWhatsApp}
+                    >
+                      <MessageCircle className='w-5 h-5 mr-2' />
+                      WhatsApp
                     </Button>
 
                     <Button
                       variant='elegant'
                       size='lg'
-                      className='w-full sm:flex-1'
                       onClick={handleCall}
                     >
                       <Phone className='w-5 h-5 mr-2' />
-                      Call for Rates
+                      Call Reception
                     </Button>
                   </div>
                 </CardContent>
@@ -225,3 +323,4 @@ const RoomsSection = () => {
 }
 
 export default RoomsSection
+```
