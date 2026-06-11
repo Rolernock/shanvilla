@@ -285,7 +285,7 @@ const GallerySection = () => {
     </Card>
   </div>
 </section>
-        {/* Hall Section */}
+       
         {/* Conference Hall Section */}
         <div className='mt-20'>
           <div className='container mx-auto px-4'>
