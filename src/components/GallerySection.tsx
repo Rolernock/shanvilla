@@ -10,7 +10,15 @@ import Ginita from '/images/2ct.webp'
 import EggTizing from '/images/3ct.webp'
 import Spring from '/images/4ct.webp'
 import Food from '/images/fd.webp'
-
+import Autoplay from 'embla-carousel-autoplay'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
+import { Button } from '@/components/ui/button'
 const HeroResort = '/images/shanvillaresort-137.webp'
 const Accommodation = '/images/shanvillaresort-157.webp'
 const Restaurant = '/images/shanvillaresort-153.webp'
@@ -390,15 +398,7 @@ const GallerySection = () => {
 
         {/* Then follow with your Cocktails Section */}
         {/* Cocktails Section */}
-        import Autoplay from 'embla-carousel-autoplay'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel'
-import { Button } from '@/components/ui/button'
+        
 
 const cocktails = [
   {
